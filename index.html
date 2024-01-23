@@ -6,10 +6,103 @@
     <title>Hochey</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <style>
+        .font-manrope{
+            font-family: "Manrope", sans-serif;
+        }
+    </style>
+    <!--tailwind color-->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
 </head>
-<body>
-    <header>
-
+<body class="font-manrope">
+    <header class="px-4 lg:px-32">
+        <nav class=" pt-4 lg:pt-12">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden p-0" >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Pages</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-lg pl-1 lg:text-2xl">Hockey<span class="text-orange-600">'</span>s</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a class="text-orange-600">Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Pages</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Contact</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                    <button class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class=" hidden lg:h-5 w-5 pr-px" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                      </button>
+                  
+                    <button class="btn btn-error"><span class="text-white">Get Ticket</span></button>
+                </div>
+              </div>
+        </nav>
+        <section class="pt-12 relative">
+            <div class=" w-full carousel">
+                <div id="slide1" class="carousel-item relative w-full">
+                  <img src="Images/1.png" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle">❮</a> 
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                    <div class="p-6 bg-black rounded-2xl w-6/12 h-36 absolute top-16 right-1">
+                      <h3 class="pb-1.5 text-size text-xl text-white">Meet all the heroes from the field</h3>
+                      <p class="text-white text-base">Explore field heroes' inspiring stories of triumph and dedication in a journey of resilience and passion.</p>
+                     </div>
+                  </div>
+                </div> 
+                <div id="slide2" class="carousel-item relative w-full">
+                  <img src="Images/h1.jpg" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a> 
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                    <div class="p-6 bg-black rounded-2xl w-6/12 h-36 absolute top-16 right-1">
+                      <h3 class="pb-1.5 text-size text-xl text-white">Heroic Horizons.</h3>
+                      <p class="text-white text-base">Discover the resilience and passion of field heroes in their inspiring stories of triumph</p>
+                     </div>
+                  </div>
+                </div> 
+                <div id="slide3" class="carousel-item relative w-full">
+                  <img src="Images/h3.jpg" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a> 
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                    <div class="p-6 bg-black rounded-2xl w-6/12 h-36 absolute top-16 right-1">
+                      <h3 class="pb-1.5 text-size text-xl text-white">Stories of Inspiration</h3>
+                      <p class="text-white text-base">Uncover triumphs and passion in the inspiring stories of field heroes.</p>
+                     </div>
+                  </div>
+                </div> 
+             </div>
+            
+        </section>
     </header>
     <main>
 
@@ -17,6 +110,5 @@
     <footer>
 
     </footer>
-    
 </body>
 </html>
